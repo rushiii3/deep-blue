@@ -1,9 +1,11 @@
 import { useState } from "react";
 import "./App.css";
+
 import Footer from "./Component/Layout/Footer";
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import {LandingPage,Login} from './Routes';
 import NavbarShow from "./Component/Layout/Navbarshow";
+import Navbar from "./Component/Layout/navbar";
 export default function App() {
   return (
     <div class="overflow-x-hidden antialiased">
