@@ -5,7 +5,7 @@ import Footer from "./Component/Layout/Footer";
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import {LandingPage,Login} from './Routes';
 import NavbarShow from "./Component/Layout/Navbarshow";
-import Navbar from "./Component/Layout/navbar";
+import Navbar from "./Component/Layout/Navbar";
 export default function App() {
   return (
     <div class="overflow-x-hidden antialiased">
