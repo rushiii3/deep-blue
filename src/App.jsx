@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./App.css";
-import Navbar from "./Component/Layout/navbar";
 import Footer from "./Component/Layout/Footer";
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import {LandingPage,Login} from './Routes';
