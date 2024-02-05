@@ -1,8 +1,9 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 
 
 const Upload = () => {
-    const [selectedFile, setSelectedFile] = useState(null);
+  const [selectedFile, setSelectedFile] = useState(null);
   const [message, setMessage] = useState('');
 
   const handleFileChange = (event) => {
@@ -19,13 +20,13 @@ const Upload = () => {
     formData.append('pdf', selectedFile);
 
     try {
-      const response = await fetch('http://localhost:3000/upload', {
-        method: 'POST',
-        body: formData,
+      const response = await axios.post('http://localhost:4000/upload', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
       });
 
-      const result = await response.json();
-      setMessage(result.message);
+      setMessage(response.data.message);
     } catch (error) {
       console.error('Error uploading file:', error);
       setMessage('Error uploading file.');
